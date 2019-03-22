@@ -1,0 +1,9 @@
+.wn-icon { background-image: url(/src/assets/user/sprites/status.png);background-size: 4rem;display: inline-block;vertical-align: middle;}
+.wn-icon-dismissal {width: 1.32rem; height: 0.72rem; background-position: 0rem 0rem;}
+.wn-icon-final-reject {width: 1.32rem; height: 0.72rem; background-position: -1.34rem 0rem;}
+.wn-icon-first-reject {width: 1.32rem; height: 0.72rem; background-position: 0rem -0.74rem;}
+.wn-icon-got-loan {width: 1.32rem; height: 0.72rem; background-position: -1.34rem -0.74rem;}
+.wn-icon-inprogess {width: 1.32rem; height: 0.72rem; background-position: 0rem -1.48rem;}
+.wn-icon-making-loans {width: 1.32rem; height: 0.72rem; background-position: -1.34rem -1.48rem;}
+.wn-icon-passed {width: 1.32rem; height: 0.72rem; background-position: -2.68rem 0rem;}
+.wn-icon-second-turn {width: 1.32rem; height: 0.72rem; background-position: -2.68rem -0.74rem;}

@@ -1,0 +1,52 @@
+/**
+  * Titlebar Theme: default
+  */
+
+.am-titlebar-default {
+  @titlebar-bg: transparent;
+  @titlebar-color: @global-primary;
+  @titlebar-link-color: @titlebar-color;
+  @titlebar-border-color: #dedede;
+  @titlebar-border-left-color: @titlebar-color;
+  background-color: @titlebar-bg;
+  line-height: 40px;
+  a {
+    color: @titlebar-link-color;
+  }
+
+  .am-titlebar-title {
+    position: relative;
+    padding-left: 15px;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      bottom: 8px;
+      border-left: 6px solid @global-primary;
+    }
+  }
+
+  .am-titlebar-nav {
+    flex: 1;
+    text-align: right;
+
+    a {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .hook-am-titlebar-default;
+}
+
+.hook-am-titlebar-default() {
+}

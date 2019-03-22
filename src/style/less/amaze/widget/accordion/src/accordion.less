@@ -1,0 +1,27 @@
+// core
+.am-accordion-item {
+  margin: 0;
+}
+
+.am-accordion-title {
+  font-weight: normal;
+  cursor: pointer;
+
+  .am-accordion-item.am-disabled & {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// 规避 Collapase 处理不当的问题
+.am-accordion-bd {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.am-accordion-content {
+  margin-top: 0;
+  padding: 0.08rem 0.1rem 0.12rem;
+  font-size: 14px;
+}

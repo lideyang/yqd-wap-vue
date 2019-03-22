@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="/dist/css/vendor.css" />
+    <link rel="stylesheet" href="/dist/css/pages/home/index.css" />
+    <script>
+      //设置rem
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        var dpr = window.devicePixelRatio || 1;
+        // adjust body font size
+        function setBodyFontSize() {
+          if (document.body) {
+            document.body.style.fontSize = '14px'
+          }
+          else {
+            document.addEventListener('DOMContentLoaded', setBodyFontSize)
+          }
+        }
+
+        setBodyFontSize();
+        function setRemUnit() {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth >= 750) {
+            docEl.style.fontSize = '100px';
+          } else {
+            docEl.style.fontSize = 200 * (clientWidth / 750) + 'px';
+          }
+        }
+
+        setRemUnit()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, setRemUnit);
+        window.addEventListener('pageshow', function (e) {
+          if (e.persisted) {
+            setRemUnit()
+          }
+        })
+      })(document, window);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- built files will be auto injected -->
+    <script src="/dist/js/vendor.js"></script>
+    <script src="/dist/js/common.js"></script>
+    <script src="/dist/js/pages/home/index.js"></script>
+  </body>
+</html>

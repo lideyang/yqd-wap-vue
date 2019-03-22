@@ -1,0 +1,6 @@
+.step3-icon { background-image: url(/src/assets/application/sprites/step3.png);background-size: 1.42rem;display: inline-block;vertical-align: middle;}
+.step3-icon-accounting {width: 0.5rem; height: 0.48rem; background-position: -0.54rem 0rem;}
+.step3-icon-agreement {width: 0.45rem; height: 0.49rem; background-position: 0rem -0.55rem;}
+.step3-icon-checked {width: 0.36rem; height: 0.36rem; background-position: -1.06rem 0rem;}
+.step3-icon-management {width: 0.52rem; height: 0.53rem; background-position: 0rem 0rem;}
+.step3-icon-myhouse {width: 0.41rem; height: 0.41rem; background-position: -0.47rem -0.55rem;}

@@ -1,0 +1,5 @@
+.menu-icon { background-image: url(/src/assets/application/sprites/menu.png);background-size: 1.78rem;display: inline-block;vertical-align: middle;}
+.menu-icon-my_account {width: 0.88rem; height: 0.88rem; background-position: 0rem 0rem;}
+.menu-icon-my_apply {width: 0.88rem; height: 0.88rem; background-position: -0.9rem 0rem;}
+.menu-icon-my_loan {width: 0.88rem; height: 0.88rem; background-position: 0rem -0.9rem;}
+.menu-icon-personal_info {width: 0.88rem; height: 0.88rem; background-position: -0.9rem -0.9rem;}

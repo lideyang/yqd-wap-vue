@@ -1,0 +1,290 @@
+@delay: 0.3s;
+
+/**
+ * fade
+ */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity @delay;
+}
+
+.fade-enter,
+.fade-leave-active,
+.fade-leave-to {
+    opacity: 0;
+}
+/**
+ * jump
+ */
+.jump-enter-active {
+    animation: jump @delay;
+}
+
+.jump-leave-active {
+    animation: jump @delay reverse;
+}
+@keyframes jump {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+/**
+ * long-form
+ */
+.long-form-enter-active {
+    transition: all @delay ease;
+}
+
+.long-form-leave-active {
+    transition: all @delay cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.long-form-enter,
+.long-form-leave-to {
+    border-right: solid 1px #ddd !important;
+    opacity: 0;
+    transform: scaleX(0px);
+}
+/**
+ * scale-up
+ */
+.scale-up-enter-active {
+    animation: scaleUp @delay;
+}
+
+.scale-up-leave-active {
+    animation: scaleUp @delay reverse;
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale3D(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3D(1.2, 1.2, 1.2);
+    }
+
+    100% {
+        transform: scale3D(1, 1, 1);
+    }
+}
+/**
+ * scale-down
+ */
+.scale-down-enter-active {
+    animation: scaleDown @delay;
+}
+
+.scale-down-leave-active {
+    animation: scaleDown @delay reverse;
+}
+@keyframes scaleDown {
+    0% {
+        transform: scale3D(1.2, 1.2, 1.2);
+    }
+
+    50% {
+        transform: scale3D(0.8, 0.8, 0.8);
+    }
+
+    100% {
+        transform: scale3D(1, 1, 1);
+    }
+}
+/**
+ * slide-left
+ */
+.slide-left-enter-active {
+    animation: slideLeft @delay;
+}
+
+.slide-left-leave-active {
+    animation: slideLeft @delay reverse;
+}
+@keyframes slideLeft {
+    0% {
+        transform: translate3d(30px, 0, 0);
+    }
+
+    70% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0px, 0, 0);
+    }
+}
+/**
+ * slide-right
+ */
+.slide-right-enter-active {
+    animation: slideRight @delay;
+}
+
+.slide-right-leave-active {
+    animation: slideRight @delay reverse;
+}
+@keyframes slideRight {
+    0% {
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    70% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0px, 0, 0);
+    }
+}
+/**
+ * slide-down
+ */
+.slide-down-enter-active {
+    transform-origin: center top;
+    animation: slideDown @delay;
+}
+
+.slide-down-leave-active {
+    transform-origin: center top;
+    animation: slideDown @delay reverse;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/**
+ *scroll-up
+**/
+.scroll-up-enter-active {
+    transform-origin: center top;
+    animation: scrollUp @delay;
+}
+
+.scroll-up-leave-active {
+    transform-origin: center top;
+    animation: scrollUp @delay reverse;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/**
+ * locker-left
+ */
+.locker-left-enter-active {
+    animation: lockerLeft @delay;
+}
+
+.locker-left-leave-active {
+    animation: lockerLeft @delay reverse;
+}
+
+@keyframes lockerLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/**
+ * locker-right
+ */
+.locker-right-enter-active {
+    animation: lockerRight @delay;
+}
+
+.locker-right-leave-active {
+    animation: lockerRight @delay reverse;
+}
+
+@keyframes lockerRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/**
+ * notify
+ */
+.notify-enter-active {
+    animation: notify @delay;
+}
+.notify-leave-active {
+    animation: notify @delay reverse;
+}
+
+@keyframes notify {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/**
+ * message
+ */
+.message-right-enter-active {
+    animation: messageRight @delay;
+}
+.message-right-leave-active {
+    animation: messageRight @delay reverse;
+}
+
+@keyframes messageRight {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.message-left-enter-active {
+    animation: messageLeft @delay;
+}
+.message-left-leave-active {
+    animation: messageLeft @delay reverse;
+}
+
+@keyframes messageLeft {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

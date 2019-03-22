@@ -1,0 +1,440 @@
+@import "amaze/amazeui";
+@import "../../font/iconfont.css";
+@import "amaze/variables";
+html {
+
+}
+
+body {
+  font-size: 14px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  margin-bottom: .7rem;
+}
+a,button{
+  outline:none;
+}
+ul{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+/* icon */
+.am-next, .am-prev {
+
+}
+.am-icon-caret-up:before{
+  content: '\e67c';
+}
+.am-icon-caret-down:before{
+  content: '\e602';
+}
+.am-icon-check:before{
+  content:'\e60d'
+}
+/* slider */
+.am-slider-default {
+  margin: 0;
+}
+
+/* navbar */
+.am-navbar-nav {
+  .icon-font {
+    font-size: 20px;
+  }
+}
+/* text */
+.text-one-primary{
+  color:#0099ff;
+}
+/* btn */
+.btn-secondary, .btn-secondary:focus, .btn-secondary:hover {
+  border: 2px solid @global-secondary;
+  background-color: #fff;
+  color: @global-secondary;
+}
+.btn-three, .btn-three:focus, .btn-three:hover {
+  border: 2px solid @global-primary;
+  background-color: #fff;
+  color: @global-primary;
+}
+.btn-disabled, .btn-disabled:hover, .btn-disabled:focus, .btn-disabled:active {
+  color: #fff;
+  background-color: #a6a6a6;
+  border-color: #a6a6a6;
+  cursor: not-allowed;
+}
+.btn-download{
+  color: #fff;
+  border:none;
+  background: #3863ca; /* 一些不支持背景渐变的浏览器 */
+  background: linear-gradient(to bottom, #3863ca, #2f2987);
+}
+.link-white {
+  color: #fff;
+}
+.vertical-middle{
+  vertical-align:middle;
+}
+/* header */
+.header-account(@color: #fff,@bgColor:none){
+  background: @bgColor;
+  color: #fff;
+  border-bottom:none;
+  z-index: 999;
+  .am-header-nav{
+    >a{
+      color:@color
+    }
+  }
+  .am-header-title{
+    color:#fff;
+    a{
+      color: @color;
+    }
+  }
+}
+.outside_input{
+  display: none!important;
+}
+/* bg */
+.main-bg {
+  background: url(/public/images/main_bg.jpg) no-repeat #f1f1f1;
+  background-size: 100% auto;
+}
+
+/* animation */
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.am-icon-spin {
+  display: inline-block;
+  animation: icon-spin 2s infinite linear;
+}
+/* label */
+.label-wh,.text-wh{
+  background-color: #e35064;
+}
+.label-lb,.text-lb{
+  background-color: #743f8f;
+}
+
+.label-qn,.text-qn{
+  background-color: #a2753f;
+}
+
+.label-sn,.text-sn{
+  background-color: #075c1f;
+}
+
+.label-cb,.text-cb{
+  background-color: #4459a6;
+}
+.label-wq,.text-wq{
+  background-color: #000d59;
+}
+/* 环状圈 */
+.circle {
+  width: .6rem;
+  height: .6rem;
+  position: relative;
+  border-radius: 50%;
+  background: @global-secondary;
+  .pie_left, .pie_right {
+    width: .6rem;
+    height: .6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .left, .right {
+    width: .6rem;
+    height: .6rem;
+    background: #bfbfbf;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility:hidden;
+    -webkit-perspective:1000;
+  }
+  .pie_right, .right {
+    clip: rect(0, auto, auto, .3rem);
+    transition: all .3s ease-in;
+  }
+  .pie_left, .left {
+    clip: rect(0, .3rem, auto, 0);
+    transition: all .3s ease .3s;
+  }
+  .mask {
+    width: .52rem;
+    height: .52rem;
+    line-height: .52rem;
+    border-radius: 50%;
+    left: .04rem;
+    top: .04rem;
+    background: #fff;
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+  }
+}
+
+/* layer */
+.layui-layer-msg {
+  width: 100% !important;
+  min-height: 50px !important;
+  line-height: 1 !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-color: rgba(0, 0, 0, .7) !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  border-bottom:none!important;
+}
+
+/* 刷新加载*/
+.mescroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mescroll-hardware {
+  -webkit-transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000
+}
+
+.mescroll-downwarp {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  text-align: center
+}
+
+.mescroll-downwarp-reset {
+  -webkit-transition: height 300ms;
+  transition: height 300ms
+}
+
+.mescroll-downwarp .downwarp-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 30px;
+  padding: 10px 0
+}
+
+.mescroll-upwarp {
+  min-height: 30px;
+  padding: 15px 0;
+  text-align: center;
+  visibility: hidden
+}
+
+.mescroll-downwarp .downwarp-tip, .mescroll-upwarp .upwarp-tip, .mescroll-upwarp .upwarp-nodata {
+  display: inline-block;
+  font-size: 12px;
+  color: gray;
+  vertical-align: top;
+  margin: 0;
+}
+
+.mescroll-downwarp .downwarp-progress, .mescroll-upwarp .upwarp-progress {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  margin-right: 8px;
+  border-bottom-color: transparent;
+  vertical-align: middle
+}
+
+.mescroll-rotate {
+  -webkit-animation: mescrollRotate .6s linear infinite;
+  animation: mescrollRotate .6s linear infinite
+}
+
+@-webkit-keyframes mescrollRotate {
+  0% {
+    -webkit-transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes mescrollRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+.mescroll-empty {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center
+}
+
+.mescroll-empty{
+  img{
+    width:1.4rem;
+  }
+}
+
+.mescroll-empty .empty-tip {
+  margin: .2rem 0;
+  font-size: 14px;
+  color: gray
+}
+
+
+.mescroll-totop {
+  z-index: 9990;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  opacity: 0
+}
+
+.mescroll-fade-in {
+  -webkit-animation: mescrollFadeIn .5s linear forwards;
+  animation: mescrollFadeIn .5s linear forwards
+}
+
+@-webkit-keyframes mescrollFadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes mescrollFadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.mescroll-fade-out {
+  pointer-events: none;
+  -webkit-animation: mescrollFadeOut .5s linear forwards;
+  animation: mescrollFadeOut .5s linear forwards
+}
+
+@-webkit-keyframes mescrollFadeOut {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes mescrollFadeOut {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+.mescroll-bar::-webkit-scrollbar-track {
+  background-color: transparent
+}
+
+.mescroll-bar::-webkit-scrollbar {
+  width: 6px
+}
+
+.mescroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #ccc
+}
+
+.mescroll-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa
+}
+/*存管modal*/
+.open-modal{
+  .open-modal-layer{
+    padding:.35rem 0;
+    .logo{
+      padding:0 0 .25rem;
+      margin:0 .1rem .3rem;
+      border-bottom:1px solid #ececec;
+      img{
+        width:1.6rem;
+      }
+    }
+    .content{
+      h3{
+        font-size: 16px;
+        margin:0 0 .2rem;
+      }
+      p{
+        margin:0 0 .05rem;
+        padding:0 .3rem;
+        text-align: left;
+      }
+    }
+    .open-btn{
+      width:2.4rem;
+      height: .4rem;
+      line-height: .4rem;
+      margin:.15rem auto;
+    }
+  }
+}
+
+/* layer-alert*/
+.layer-alert{
+  .layui-layer-btn{
+    border-top:1px solid #eaeaea;
+    padding:0;
+    height: .4rem;
+    a{
+      display: inline-block;
+      background: #fff;
+      width:100%;
+      border:none;
+      color:@global-primary;
+      height: .4rem;
+      line-height: .4rem;
+      border-radius: 0;
+      margin:0;
+    }
+  }
+}
